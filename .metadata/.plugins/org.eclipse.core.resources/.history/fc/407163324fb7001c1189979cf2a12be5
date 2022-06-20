@@ -1,0 +1,66 @@
+package gui;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import dao.ClientesDaoJDBC;
+import db.DB;
+import entities.Clientes;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+public class PesquisaController implements Initializable {
+
+	@FXML
+	private TextField txtCpfSearch;
+
+	@FXML
+	private TextField txtNomeSearch;
+
+	@FXML
+	private TextField txtEnderecoSearch;
+
+	@FXML
+	private TextField txtCidadeSearch;
+
+	@FXML
+	private TextField txtCepSearch;
+
+	@FXML
+	private TextField txtTelefoneSearch;
+	
+	@FXML
+	private TextField txtCpfReturn;
+
+	@FXML
+	private Button btActionUpdate;
+
+	@FXML
+	public void onBtNewActionAtualizar() {
+
+		ClientesDaoJDBC pesquisa = new ClientesDaoJDBC(DB.getConnection());
+
+		Clientes c = new Clientes();
+
+		c.setCpf(txtCpfSearch.getText());
+
+		pesquisa.findByCpf(c.getCpf());
+
+		txtCpfReturn.setText("A");
+		
+
+	}
+
+	private void initializeNodes() {
+
+	}
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		initializeNodes();
+
+	}
+
+}

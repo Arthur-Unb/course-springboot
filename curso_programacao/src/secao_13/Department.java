@@ -1,0 +1,24 @@
+package secao_13;
+
+public class Department {
+
+	private String name;
+
+	public Department() {
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Department(String name) {
+		super();
+		this.name = name;
+	}
+
+}

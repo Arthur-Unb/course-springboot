@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RegistrarController">
+   <children>
+      <GridPane layoutX="116.0" layoutY="57.0" prefHeight="287.0" prefWidth="368.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="174.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="176.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtCpfRegistrar" prefWidth="150.0" promptText="Insira o CPF do cliente" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtNome" promptText="Insira o nome do cliente" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtEndereco" promptText="Insira o endereço do cliente" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtCidade" promptText="Insira a cidade do cliente" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtCep" promptText="Insira o CEP do cliente" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtTelefone" promptText="Insira o telefone do cliente" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CEP" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar cliente (CPF)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtCpfBuscar" promptText="Insira o CPF da busca" GridPane.columnIndex="1" />
+            <Button fx:id="cadastrarButton" mnemonicParsing="false" onAction="#onBtNewActionRegistrar" prefWidth="111.0" text="Cadastrar cliente" GridPane.rowIndex="8" />
+            <Button fx:id="pesquisarButton" mnemonicParsing="false" onAction="#onBtNewActionPesquisar" prefWidth="111.0" text="Pesquisar cliente" GridPane.rowIndex="1" />
+            <Button fx:id="atualizarButton" mnemonicParsing="false" onAction="#onBtNewActionAtualizar" text="Atualizar cadastro" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar cliente (CPF)" GridPane.rowIndex="10">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtCpfExcluir" promptText="Insira o CPF a ser excluído" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Button fx:id="excluirButton" mnemonicParsing="false" onAction="#onBtNewActionExcluir" prefWidth="111.0" text="Excluir cliente" GridPane.rowIndex="11" />
+            <Text fx:id="textShowRegistrar" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="9" />
+            <Text fx:id="textShowAtualizar" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Text fx:id="textShowExcluir" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         </children>
+      </GridPane>
+      <Button fx:id="inicioButton" layoutX="475.0" layoutY="361.0" mnemonicParsing="false" onAction="#onBtNewActionInicio" prefWidth="111.0" text="Voltar ao início" />
+   </children>
+</AnchorPane>
